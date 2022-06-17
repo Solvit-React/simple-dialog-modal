@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <div  class="avatar-button">
+        <button class="close-button">+</button>
+    </div> -->
+
+    <button id="add_new_avatar" type="button" class="avatar-button avatar-button__add-new">+</button>
+    
+    <dialog id="add_avatar_dialog" >
+        <header>
+            <div class="header-title">
+                <span>user icon</span>
+                <h1>New user</h1>
+            </div>
+            <button>+</button>
+        </header>
+        <form method="dialog">
+            <input type="file">
+        
+        </form>
+    </dialog> 
+
+    <script>
+        (function(){
+
+            const addAvatarButtonElement = document.querySelector("#add_new_avatar");
+            const addAvatarDialogElement = document.querySelector("#add_avatar_dialog");
+            
+            if(!addAvatarButtonElement) return;
+            if(!addAvatarDialogElement) return;
+
+            addAvatarButtonElement.onclick = ()=>{
+                addAvatarDialogElement.showModal();
+            }
+
+        })();
+
+        
+
+    </script>
+
+</body>
+</html>
